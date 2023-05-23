@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        cahier de texte des Experts - CodiMD
+    </title>
+    <link rel="icon" type="image/png" href="https://codimd.apps.education.fr/favicon.png">
+    <link rel="apple-touch-icon" href="https://codimd.apps.education.fr/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.0/css/bootstrap.min.css" integrity="sha256-H0KfTigpUV+0/5tn2HXC0CPwhhDhWgSawJdnFd0CGCo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fork-awesome/1.1.3/css/fork-awesome.min.css" integrity="sha256-ZhApazu+kejqTYhMF+1DzNKjIzP7KXu6AzyXcC1gMus=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github-gist.min.css" integrity="sha256-tAflq+ymku3Khs+I/WcAneIlafYgDiOQ9stIHH985Wo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic,300italic,300|Source+Serif+Pro|Source+Code+Pro:400,300,500&subset=latin,latin-ext);.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;font-size:16px;line-height:1.5;word-wrap:break-word}.markdown-body:after,.markdown-body:before{display:table;content:""}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;padding-right:4px;margin-left:-20px;line-height:1}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body hr{height:.25em;padding:0;margin:24px 0;background-color:#e7e7e7;border:0}.markdown-body blockquote{padding:0 1em;color:#777;border-left:.25em solid #ddd}.night .markdown-body blockquote{color:#bcbcbc}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.night .markdown-body h1,.night .markdown-body h2,.night .markdown-body h3,.night .markdown-body h4,.night .markdown-body h5,.night .markdown-body h6{color:#ddd}.markdown-body h1 .fa-link,.markdown-body h2 .fa-link,.markdown-body h3 .fa-link,.markdown-body h4 .fa-link,.markdown-body h5 .fa-link,.markdown-body h6 .fa-link{color:#000;vertical-align:middle;visibility:hidden;font-size:16px}.night .markdown-body h1 .fa-link,.night .markdown-body h2 .fa-link,.night .markdown-body h3 .fa-link,.night .markdown-body h4 .fa-link,.night .markdown-body h5 .fa-link,.night .markdown-body h6 .fa-link{color:#fff}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .fa-link,.markdown-body h2:hover .anchor .fa-link,.markdown-body h3:hover .anchor .fa-link,.markdown-body h4:hover .anchor .fa-link,.markdown-body h5:hover .anchor .fa-link,.markdown-body h6:hover .anchor .fa-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{padding-bottom:.3em;border-bottom:1px solid #eee}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#777}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{padding:0;list-style-type:none}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{margin-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #ddd}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.night .markdown-body table tr{background-color:#5f5f5f}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.night .markdown-body table tr:nth-child(2n){background-color:#4f4f4f}.markdown-body img{max-width:100%;box-sizing:content-box;background-color:#fff}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{max-width:none;vertical-align:text-top;background-color:transparent}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{display:block;float:left;width:auto;padding:7px;margin:13px 0 0;overflow:hidden;border:1px solid #ddd}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{display:block;padding:5px 0 0;clear:both;color:#333}.markdown-body span.align-center{display:block;overflow:hidden;clear:both}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{display:block;overflow:hidden;clear:both}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{padding:.2em 0;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}.night .markdown-body code,.night .markdown-body tt{color:#eee;background-color:hsla(0,0%,90.2%,.36)}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{letter-spacing:-.2em;content:"\A0"}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.markdown-body pre code,.markdown-body pre tt{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{padding:5px;overflow:hidden;font-size:12px;line-height:1;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{padding:10px 8px 9px;text-align:right;background:#fff;border:0}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{font-weight:700;background:#f8f8f8;border-top:0}.markdown-body kbd{display:inline-block;padding:3px 5px;font-size:11px;line-height:10px;color:#555;vertical-align:middle;background-color:#fcfcfc;border:1px solid;border-color:#ccc #ccc #bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb}.news .alert .markdown-body blockquote{padding:0 0 0 40px;border:0}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle;cursor:default!important}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;padding-top:40px;padding-bottom:40px;max-width:758px;overflow:visible!important}.markdown-body pre{border:inherit!important}.night .markdown-body pre{filter:invert(100%)}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-webkit-inline-flex;display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{text-align:right;position:relative;display:inline-block;cursor:default;z-index:4;padding:0 8px 0 0;min-width:20px;box-sizing:content-box;color:#afafaf!important;border-right:3px solid #6ce26c!important}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-left:none;border-top:none;border-bottom:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-spacing:0;border-collapse:inherit!important}.night .markdown-body .gist table tr:nth-child(2n){background-color:#ddd}.markdown-body code[data-gist-id]{background:none;padding:0;filter:invert(100%)}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{overflow:unset;margin-bottom:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert>p{margin-bottom:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.geo,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram,.markdown-body pre.vega{text-align:center;background-color:inherit;border-radius:0;white-space:inherit}.night .markdown-body pre.graphviz .graph>polygon{fill:#333}.night .markdown-body pre.mermaid .sectionTitle,.night .markdown-body pre.mermaid .titleText,.night .markdown-body pre.mermaid text{fill:#fff}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code,.markdown-body pre.vega>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg,.markdown-body pre.vega>svg{max-width:100%;height:100%}.night .markdown-body .abc path{fill:#eee}.night .markdown-body .abc path.note_selected{fill:##4DD0E1}.night tspan{fill:#fefefe}.night pre rect{fill:transparent}.night pre.flow-chart path,.night pre.flow-chart rect{stroke:#fff}.markdown-body pre>code.wrap{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.markdown-body .alert>p,.markdown-body .alert>ul{margin-bottom:0}.markdown-body summary{display:list-item}.markdown-body summary:focus{outline:none}.markdown-body details summary{cursor:pointer}.markdown-body details:not([open])>:not(summary){display:none}.markdown-body figure{margin:1em 40px}.markdown-body img{background-color:transparent}.vimeo,.youtube{cursor:pointer;display:table;text-align:center;background-position:50%;background-repeat:no-repeat;background-size:contain;background-color:#000;overflow:hidden}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{width:100%;object-fit:contain;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{width:100%;height:100%;position:absolute;top:0;left:0}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{position:absolute;height:auto;width:auto;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;opacity:.3;-webkit-transition:opacity .2s;transition:opacity .2s;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;-webkit-transition:opacity .2s;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%}.geo-map{width:100%;height:250px}.markmap-container{height:300px}.markmap-container>svg{width:100%;height:100%}.MJX_Assistive_MathML{display:none}.ui-infobar{position:relative;z-index:2;max-width:758px;margin-top:25px;margin-bottom:-25px;color:#777}.toc .invisable-node{list-style-type:none}.ui-toc{position:fixed;bottom:20px;z-index:10000}.ui-toc-label{opacity:.9;background-color:#ccc;border:none}.ui-toc-label,.ui-toc .open .ui-toc-label{-webkit-transition:opacity .2s;transition:opacity .2s}.ui-toc .open .ui-toc-label{opacity:1;color:#5f5f5f}.ui-toc-label:focus{opacity:1;background-color:#ccc;color:#000}.ui-toc-label:hover{opacity:1;background-color:#ccc;-webkit-transition:opacity .2s;transition:opacity .2s}.ui-toc-dropdown{margin-top:23px;margin-bottom:20px;padding-left:10px;padding-right:10px;max-width:45vw;width:25vw;max-height:70vh;overflow:auto;text-align:inherit}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{padding-right:0;letter-spacing:.0029em}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{display:block;padding:4px 20px;font-size:13px;font-weight:500;color:#767676}.ui-toc-dropdown .nav>li:first-child:last-child>ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{padding-left:19px;color:#000;text-decoration:none;background-color:transparent;border-left:1px solid #000}.night .ui-toc-dropdown .nav>li>a:focus,.night .ui-toc-dropdown .nav>li>a:hover{color:#fff;border-left-color:#fff}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{padding-right:19px;border-left:none;border-right:1px solid #000}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{padding-left:18px;font-weight:700;color:#000;background-color:transparent;border-left:2px solid #000}.night .ui-toc-dropdown .nav>.active:focus>a,.night .ui-toc-dropdown .nav>.active:hover>a,.night .ui-toc-dropdown .nav>.active>a{color:#fff;border-left:2px solid #fff}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{padding-right:18px;border-left:none;border-right:2px solid #000}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{padding-top:1px;padding-bottom:1px;padding-left:30px;font-size:12px;font-weight:400}.night .ui-toc-dropdown .nav>li>a{color:#aaa}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{padding-top:1px;padding-bottom:1px;padding-left:40px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>ul>li>ul>li>a{padding-top:1px;padding-bottom:1px;padding-left:50px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>ul>li>a{padding-right:50px}.ui-toc-dropdown .nav .nav>li>ul>li>ul>li>ul>li>a{padding-top:1px;padding-bottom:1px;padding-left:60px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>ul>li>ul>li>a{padding-right:60px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>li>ul>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>ul>li>a:hover{padding-left:49px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>ul>li>a:hover{padding-right:49px}.ui-toc-dropdown .nav .nav>li>ul>li>ul>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>ul>li>ul>li>a:hover{padding-left:59px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>ul>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>ul>li>ul>li>a:hover{padding-right:59px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{padding-left:28px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{padding-left:38px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.ui-toc-dropdown .nav .nav>.active>.nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>.nav>.active>a{padding-left:48px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.active>.nav>.nav>.active>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>.nav>.active:hover>a{padding-right:48px}.ui-toc-dropdown .nav .nav>.active>.nav>.active>.nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>.nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>.nav>.active>.nav>.active>a{padding-left:58px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.active>.nav>.nav>.active>.nav>.active>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>.nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>.nav>.active>.nav>.active:hover>a{padding-right:58px}.markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,Hiragino Kaku Gothic Pro,"\30D2\30E9\30AE\30CE\89D2\30B4   Pro W3",Osaka,Meiryo,"\30E1\30A4\30EA\30AA",MS Gothic,"\FF2D\FF33   \30B4\30B7\30C3\30AF",sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}.ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,"\FF2D\FF33   \FF30\30B4\30B7\30C3\30AF",sans-serif}.markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,PingFang TC,Microsoft JhengHei,"\5FAE\8EDF\6B63\9ED1",sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}.ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,"\5FAE\8EDF\6B63\9ED1UI",sans-serif}.markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,PingFang SC,Microsoft YaHei,"\5FAE\8F6F\96C5\9ED1",sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}.ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,"\5FAE\8F6F\96C5\9ED1UI",sans-serif}.ui-affix-toc{position:fixed;top:0;max-width:15vw;max-height:70vh;overflow:auto}.back-to-top,.expand-toggle,.go-to-bottom{display:block;padding:4px 10px;margin-top:10px;margin-left:10px;font-size:12px;font-weight:500;color:rgba(0,0,0,.85)}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{width:20px;height:20px;display:block;border-radius:3px;margin-top:2px;margin-bottom:2px;margin-right:5px;background-position:50%;background-repeat:no-repeat;background-size:contain}.ui-user-icon.small{width:18px;height:18px;display:inline-block;vertical-align:middle;margin:0 0 .2em}small span{line-height:22px}small .dropdown{display:inline-block}small .dropdown a:focus,small .dropdown a:hover{text-decoration:none}.unselectable{-moz-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-o-user-select:none;user-select:none}.night .navbar{background:#333;border-bottom-color:#333;color:#eee}.night .navbar a{color:#eee}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{position:relative;z-index:1;color:#222}.markdown-body.slides:before{content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;z-index:-1;background-color:currentColor;box-shadow:0 0 0 50vw}.markdown-body.slides section[data-markdown]{position:relative;margin-bottom:1.5em;background-color:#fff;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{position:absolute;top:50%;left:1em;right:1em;transform:translateY(-50%);max-height:100%;overflow:hidden}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{content:"";position:absolute;top:-1.5em;right:1em;height:1.5em;border:3px solid #777}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;text-shadow:0 0 1em transparent,1px 1px 1.2px rgba(0,0,0,.004);-webkit-overflow-scrolling:touch;font-family:Source Sans Pro,Helvetica,Arial,sans-serif;letter-spacing:.025em}.focus,:focus{outline:none!important}::-moz-focus-inner{border:0!important}body.modal-open{overflow-y:auto;padding-right:0!important}
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="doc" class="markdown-body container-fluid"><h1 id="cahier-de-texte-des-Experts"><a class="anchor hidden-xs" href="#cahier-de-texte-des-Experts" title="cahier-de-texte-des-Experts"><i class="fa fa-link"></i></a>cahier de texte des Experts</h1><p><a href="https://codimd.apps.education.fr/s/6As0Wif90" target="_blank" rel="noopener"><strong>prix Tangente</strong></a></p><hr><div class="alert alert-info">
+<details><summary>progression</summary>
+<p><a href="https://codimd.apps.education.fr/p/3MqtoGN-S#/" target="_blank" rel="noopener">https://codimd.apps.education.fr/p/3MqtoGN-S#/</a><br>
+Complexe1, Divisibilité, Matrices, Complexe2,PGCD,graphe,Premiers,Matrices et suites</p>
+</details>
+</div><details><summary><strong>Complexes (algébrique)</strong> <span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-1-Frame" tabindex="0" style="position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mi mathvariant=&quot;double-struck&quot;>C</mi></mrow></math>" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-1" style="width: 0.811em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.703em; height: 0px; font-size: 116%;"><span style="position: absolute; clip: rect(1.727em, 1000.65em, 2.751em, -999.997em); top: -2.584em; left: 0em;"><span class="mrow" id="MathJax-Span-2"><span class="texatom" id="MathJax-Span-3"><span class="mrow" id="MathJax-Span-4"><span class="mi" id="MathJax-Span-5" style="font-family: MathJax_AMS;">C</span></span></span></span><span style="display: inline-block; width: 0px; height: 2.589em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.059em; border-left: 0px solid; width: 0px; height: 0.941em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow class="MJX-TeXAtom-ORD"><mi mathvariant="double-struck">C</mi></mrow></math></span></span><script type="math/tex" id="MathJax-Element-1">\mathbb{C}</script></span></summary>
+<blockquote>
+<details><summary>ven. 2 sept 2022</summary>
+<ul>
+<li>prise de contact</li>
+<li>site du professeur <a href="" target="_blank" rel="noopener">tinyurl.com/mchretien </a><br>
+A faire:<br>
+<a href="https://tinyurl.com/mchretien" target="_blank" rel="noopener"><img src="https://minio.apps.education.fr/codimd-prod/uploads/upload_f7e6fa2a9a8bc71254cb548d90654d86.png" alt="https://minio.apps.education.fr/codimd-prod/uploads/upload_f7e6fa2a9a8bc71254cb548d90654d86.png" class="md-image md-image"></a><br>
+<a href="https://codimd.apps.education.fr/p/lxQrtasAB" target="_blank" rel="noopener">diapo rentrée - CodiMD</a></li>
+<li>
+<h4 id="Chapitre-Complexes-algébrique-mathbbC"><a class="anchor hidden-xs" href="#Chapitre-Complexes-algébrique-mathbbC" title="Chapitre-Complexes-algébrique-mathbbC"><i class="fa fa-link"></i></a>Chapitre Complexes (algébrique) <span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-2-Frame" tabindex="0" style="position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mi mathvariant=&quot;double-struck&quot;>C</mi></mrow></math>" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-6" style="width: 0.775em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.711em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.612em, 1000.65em, 2.706em, -999.997em); top: -2.506em; left: 0em;"><span class="mrow" id="MathJax-Span-7"><span class="texatom" id="MathJax-Span-8"><span class="mrow" id="MathJax-Span-9"><span class="mi" id="MathJax-Span-10" style="font-family: MathJax_AMS;">C</span></span></span></span><span style="display: inline-block; width: 0px; height: 2.513em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.068em; border-left: 0px solid; width: 0px; height: 0.932em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow class="MJX-TeXAtom-ORD"><mi mathvariant="double-struck">C</mi></mrow></math></span></span><script type="math/tex" id="MathJax-Element-2">\mathbb{C}</script></span></h4>
+</li>
+</ul>
+<p>I.Ensemble <span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-3-Frame" tabindex="0" style="position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mi mathvariant=&quot;double-struck&quot;>C</mi></mrow></math>" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-11" style="width: 0.775em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.711em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.612em, 1000.65em, 2.706em, -999.997em); top: -2.506em; left: 0em;"><span class="mrow" id="MathJax-Span-12"><span class="texatom" id="MathJax-Span-13"><span class="mrow" id="MathJax-Span-14"><span class="mi" id="MathJax-Span-15" style="font-family: MathJax_AMS;">C</span></span></span></span><span style="display: inline-block; width: 0px; height: 2.513em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.068em; border-left: 0px solid; width: 0px; height: 0.932em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow class="MJX-TeXAtom-ORD"><mi mathvariant="double-struck">C</mi></mrow></math></span></span><script type="math/tex" id="MathJax-Element-3">\mathbb{C}</script></span><br>
+<img src="https://minio.apps.education.fr/codimd-prod/uploads/upload_984b506fc3cb94d2ca48bc2773c63af4.png" alt="" class="md-image md-image"></p>
+<ul>
+<li><a href="https://www.lelivrescolaire.fr/page/12852547" target="_blank" rel="noopener">Histoire des mathématiques : Nombres complexes | Lelivrescolaire.fr</a></li>
+<li><a href="https://sites.google.com/view/tqueneau/expert/complexes/complexe-alg%C3%A9brique" target="_blank" rel="noopener">tqueneau - Complexe Algébrique</a><br>
+<a href="https://www.lelivrescolaire.fr/page/12971712" target="_blank" rel="noopener">Ex 28,31,32  p34</a><br>
+A faire: ex 61,62,71</li>
+</ul>
+</details>
+</blockquote>
+<blockquote>
+<details><summary>ven. 9 sept. 2022</summary>
+<p><a href="https://mathsmentales.net/index.html?i=321,e=correction,o=yes,s=1,so=h,f=n,a=,colors=,snd=null&amp;p=0~t=Diapo%201~c=1~o=true_i=TC12~o=0,1,2,3,4~q=0.-1.-2.-3.-4.~p=~t=20~n=10" target="_blank" rel="noopener">mathsmentales</a><br>
+correction des exercices<br>
+II.Conjugués<br>
+<a href="https://www.lelivrescolaire.fr/page/12971712?docId=e-Bw2FJcjVRhOqfvOOFPw" target="_blank" rel="noopener">ex 37 38 39 42p35</a><br>
+III.Equations<br>
+ex 94 95 96 p39 à finir<br>
+<a href="https://maths-olympiques.fr/wp-content/uploads/2022/06/sujet-coupe-Animath-printemps-2022.pdf" target="_blank" rel="noopener">coupe Animaths</a><br>
+A faire: dm1</p>
+</details>
+</blockquote>
+<blockquote>
+<details><summary>ven. 16 sept. 2022</summary>
+<p>exo cours semaine passée<br>
+-Equations du 2nd degré<br>
+<a href="https://www.lelivrescolaire.fr/page/12971712?docId=e-Bw2FJcjVRhOqfvOOFPw" target="_blank" rel="noopener">ex 109 114p40</a><br>
+145p45<br>
+a aire act C p19<br>
+<img src="https://minio.apps.education.fr/codimd-prod/uploads/upload_5584dd33c7386b9f15fbf13a3afa6dd5.jpg" alt="" class="md-image md-image"></p>
+</details>
+</blockquote>
+<blockquote>
+<details><summary>ven. 23 sept. 2022</summary>
+<p><a href="https://drive.google.com/file/d/1Uog6TgfecV1a3P_xetQ_48CQlyTZodvt/view?usp=sharing" target="_blank" rel="noopener">corr dm1</a><br>
+<a href="https://drive.google.com/file/d/1FHOziq47h9Q4TP1xgBZv6BxL5vNFvEW7/view?usp=sharing" target="_blank" rel="noopener">corr dm1 dur</a><br>
+corr 145p45 +act C<br>
+V.Equations polynomiale<br>
+Equation de degré n : factorisation de <span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-4-Frame" tabindex="0" style="position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><msup><mi>z</mi><mi>n</mi></msup><mo>&amp;#x2212;</mo><msup><mi>a</mi><mi>n</mi></msup></math>" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-16" style="width: 3.607em; display: inline-block;"><span style="display: inline-block; position: relative; width: 3.221em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.419em, 1003.22em, 2.513em, -999.997em); top: -2.249em; left: 0em;"><span class="mrow" id="MathJax-Span-17"><span class="msubsup" id="MathJax-Span-18"><span style="display: inline-block; position: relative; width: 1.033em; height: 0px;"><span style="position: absolute; clip: rect(3.349em, 1000.45em, 4.186em, -999.997em); top: -3.986em; left: 0em;"><span class="mi" id="MathJax-Span-19" style="font-family: MathJax_Math-italic;">z<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span style="display: inline-block; width: 0px; height: 3.993em;"></span></span><span style="position: absolute; top: -4.373em; left: 0.518em;"><span class="mi" id="MathJax-Span-20" style="font-size: 70.7%; font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 3.993em;"></span></span></span></span><span class="mo" id="MathJax-Span-21" style="font-family: MathJax_Main; padding-left: 0.196em;">−</span><span class="msubsup" id="MathJax-Span-22" style="padding-left: 0.196em;"><span style="display: inline-block; position: relative; width: 1.033em; height: 0px;"><span style="position: absolute; clip: rect(3.349em, 1000.52em, 4.186em, -999.997em); top: -3.986em; left: 0em;"><span class="mi" id="MathJax-Span-23" style="font-family: MathJax_Math-italic;">a</span><span style="display: inline-block; width: 0px; height: 3.993em;"></span></span><span style="position: absolute; top: -4.373em; left: 0.518em;"><span class="mi" id="MathJax-Span-24" style="font-size: 70.7%; font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 3.993em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.255em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.139em; border-left: 0px solid; width: 0px; height: 1.004em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>z</mi><mi>n</mi></msup><mo>−</mo><msup><mi>a</mi><mi>n</mi></msup></math></span></span><script type="math/tex" id="MathJax-Element-4">z^n−a^n</script></span><br>
+121,148p41<br>
+[dm 2 ] (<a href="https://biblio.nathan.fr/epubs/NATHAN/bibliomanuels/distrib_gp/1/10/9233/online/OEBPS/Chapter_006/Images/Page_121695.jpg" target="_blank" rel="noopener">https://biblio.nathan.fr/epubs/NATHAN/bibliomanuels/distrib_gp/1/10/9233/online/OEBPS/Chapter_006/Images/Page_121695.jpg</a>)ou 135p44<br>
+<a href="https://biblio.nathan.fr/epubs/NATHAN/bibliomanuels/distrib_gp/1/10/9233/online/OEBPS/Chapter_006/Images/Page_121694.jpg" target="_blank" rel="noopener">dm 2 2e partie </a></p>
+</details>
+</blockquote>
+<blockquote>
+<details><summary>ven. 30 sept. 2022</summary>
+<p>A faire:142P45,tp2p33<br>
+A faire:135,124,tp1,2p33<br>
+<img src="https://minio.apps.education.fr/codimd-prod/uploads/upload_c8ac3bbbbe392d6067f27c13de0f5934.png" alt="" class="md-image md-image"><br>
+<img src="https://minio.apps.education.fr/codimd-prod/uploads/upload_a72f475b3181e7fa4b10fa8c59ba7091.png" alt="" class="md-image md-image"><br>
+p90<br>
+<a href="https://www.acamus.net/index.php?option=com_content&amp;view=article&amp;id=32:le-jeu-de-juniper-green" target="_blank" rel="noopener">jeu juniper</a><br>
+<a href="https://p.calameoassets.com/200417160545-aa02638926ef6fc08f708cd3703e875a/p128.jpg" target="_blank" rel="noopener">exo divsierus python</a><br>
+<a href="https://notebook.basthon.fr/?ipynb=eJylUsFOIzEM_RUre6BIo5Vm4TRiubEnVHHYPXWqUZq4EJFxQuKgVtX8-zq01YDUGz7ZsfNsv-eDippfVKf-ETv2aH-6uKeNahTpES-9m0CMxKo7KIPeZ9WtDmpE1lazrq-cSma0qhMHp-ajauB9rGgmWBSMHEoyNba4BeveXcaS8oKuu55A7PH3an30tiGBA0eQND3jom2Gc001t4XhU1htmMOEXBLBozTEHZrCLtBgQqnDt40KhWPhOv96ar6xgns_Tt_e3lyv2vWlbr8-dzuc_DNg5oR6lG-MO6lVf5M2uNHmFRZjyCxrGOEbjPYevM58JOCP8wi9unMkUPe9asA7QmibStbdGGzxeN_TUlR8SCmkDqqgcHUe9wpcBgoMIoF8tD3Nmme2mJKavseLSLscZnGXZ-F-VGGkSqaVFaIvGSLKkYFs6TDBW3GgAXfaMI5182U9kewqCsSQHbttPkNpMGGM6JExXWKeivdfpV43X1Z6RRnE54imRicC4p5fAt0IoHU5er0fTomnjwTUjJeDLPp5LleTMEIbudhRS-fbORhGRyHJGUzTf4euKTA" target="_blank" rel="noopener">son fichier python</a><br>
+<a href="https://console.basthon.fr/?script=eJxVkNEKwjAMRd8H-4eILy2K216F_sHoD4hIWTMNzLS2nfr5do7hzFO4uZzkxmIPlp4UcQxRsDyWBeRq1ek8d70LQEAMwfAVRbPnXbO4pqIeuKpIKa5oJX8hB-M9shUk50HANAaGAVm0WSoLm7fry2-_XsjbyeuyGbMb_DBG8JgoAXIiDPAYCQzg23QJ71kDPaWINFHAu0iJ-rigDHTu7nHAhGHWWDVz87pR5q8fsFF6FYNVjvt3PJeFD8RJrO9u6lrKD_8UXXc" target="_blank" rel="noopener">correction</a></p>
+</details>
+</blockquote>
+</details><details><summary><strong>Divisibilité, Congruence</strong> | , <span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-5-Frame" tabindex="0" style="position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mo>&amp;#x2261;</mo></math>" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-25" style="width: 0.919em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.757em; height: 0px; font-size: 116%;"><span style="position: absolute; clip: rect(1.727em, 1000.7em, 2.481em, -999.997em); top: -2.368em; left: 0em;"><span class="mrow" id="MathJax-Span-26"><span class="mo" id="MathJax-Span-27" style="font-family: MathJax_Main;">≡</span></span><span style="display: inline-block; width: 0px; height: 2.373em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: 0.003em; border-left: 0px solid; width: 0px; height: 0.628em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≡</mo></math></span></span><script type="math/tex" id="MathJax-Element-5">\equiv</script></span></summary>
+<blockquote>
+<details><summary>ven. 7 oct. 2022</summary>
+<p>DS Complexe<br>
+I.Divisibilité</p>
+<ul>
+<li><a href="https://sites.google.com/view/tqueneau/expert/arithm%C3%A9tique" target="_blank" rel="noopener">tqueneau - Arithmétique</a></li>
+<li><a href="https://sites.google.com/view/tqueneau/expert/arithm%C3%A9tique/divisibilit%C3%A9-congruence" target="_blank" rel="noopener">tqueneau - Divisibilité Congruence</a></li>
+<li><a href="https://www.lelivrescolaire.fr/page/15055203" target="_blank" rel="noopener">Histoire des mathématiques : Arithmétique | Lelivrescolaire.fr</a><br>
+<a href="https://www.lelivrescolaire.fr/page/13932947" target="_blank" rel="noopener">Activités - Histoire des mathématiques | Lelivrescolaire.fr</a><br>
+<a href="https://www.lelivrescolaire.fr/page/12239327" target="_blank" rel="noopener">Divisibilité dans Z | Lelivrescolaire.fr</a><br>
+<a href="http://maths-au-quotidien.fr/automaths-questions-flash.php" target="_blank" rel="noopener">Automaths - maths-expertes</a><br>
+p90<br>
+28,33,68,69p105<br>
+I.Divisibilité: combinaison linéaire<br>
+<img src="https://minio.apps.education.fr/codimd-prod/uploads/upload_ad41dc54d72653873ddba79471228ce5.jpg" alt="" class="md-image md-image"><br>
+<img src="https://minio.apps.education.fr/codimd-prod/uploads/upload_4083db0988a3dcc175574b84eaab2a79.jpg" alt="" class="md-image md-image"><br>
+A faire 38 39 ,python amicaux parfait</li>
+</ul>
+</details>
+</blockquote>
+<blockquote>
+<details><summary>ven. 14 oct. 2022</summary>
+<p>42 43 44 79 86 89 <a href="https://www.lelivrescolaire.fr/page/12243268" target="_blank" rel="noopener">Act preuve 9</a><br>
+II. <a href="https://www.lelivrescolaire.fr/page/11034814" target="_blank" rel="noopener">division euclidienne:cours à recopier</a>, 1ers exo<br>
+III.Congruences<br>
+ex 46 47 50 51 52<br>
+IE div</p>
+<iframe width="100%" height="500" src="https://console.basthon.fr/?script=eJyNj0EKwjAQRfeF3mHAhQkUi1shNyi9gLgITaIT7DQmjec3saJSLPVDyCRvmP9HaQMK7xh09IERP5QFJDXieJoqM3hAQAIv6azZvnr3ZKEBqmsUgmr8-n6O2EnnNCmGfAJej9ETNGVRFirZOumNxJG1q6btzDLEnn1CI-dC_OnOmtdziiB7zMMBNol3F-3TAaUDdEN013SrbWoJYGO4RWjXw2VmF9hyeAuS1AzYX1tlOY80Mqxs2uQBwDRz4g"> </iframe>
+<p><a href="https://console.basthon.fr/?script=eJyNj0EKwjAQRfeF3mHAhQkUi1shNyi9gLgITaIT7DQmjec3saJSLPVDyCRvmP9HaQMK7xh09IERP5QFJDXieJoqM3hAQAIv6azZvnr3ZKEBqmsUgmr8-n6O2EnnNCmGfAJej9ETNGVRFirZOumNxJG1q6btzDLEnn1CI-dC_OnOmtdziiB7zMMBNol3F-3TAaUDdEN013SrbWoJYGO4RWjXw2VmF9hyeAuS1AzYX1tlOY80Mqxs2uQBwDRz4g" target="_blank" rel="noopener">lien</a><br>
+A faire <a href="https://codimd.apps.education.fr/s/VQLavolfQ" target="_blank" rel="noopener">DM3</a><br>
+Voir <a href="https://drive.google.com/file/d/1d74mM4V7Cj7TJrd6gFzdiDKWaCeNS8_h/view" target="_blank" rel="noopener">fract egypt</a><br>
+exs 42 43 44 P105 79 86 89 fait</p>
+</details>
+</blockquote>
+<blockquote>
+<details><summary>ven. 21 oct. 2022</summary>
+<p>suite congruence.<br>
+ex 50à 53,<br>
+<a href="https://sites.google.com/view/tqueneau/expert/arithm%C3%A9tique/divisibilit%C3%A9-congruence/critere-divisibilit%C3%A9" target="_blank" rel="noopener">ex critere divisibilité</a>,110,131b<br>
+ex 122 rep units<br>
+ie diviseurs: c.l.,de<br>
+A faire: <a href="https://codimd.apps.education.fr/s/4C9e918rt" target="_blank" rel="noopener">DM TOUSSAINT EXPERT</a><br>
+<a href="https://view.genial.ly/5faf57520f2ccc0d2e97bc3f" target="_blank" rel="noopener">escape game congruence</a></p>
+</details>
+</blockquote>
+<h4 id="TOUSSAINT"><a class="anchor hidden-xs" href="#TOUSSAINT" title="TOUSSAINT"><i class="fa fa-link"></i></a>TOUSSAINT</h4>
+<blockquote>
+<details><summary><s>ven. 11 nov. 2022</s></summary>
+</details>
+</blockquote>
+<blockquote>
+<details><summary>ven. 18 nov. 2022</summary>
+<p><a href="https://www.lelivrescolaire.fr/page/12245048" target="_blank" rel="noopener">ex 122 c bon? rep units</a></p>
+<blockquote>
+<details><summary><a href="" target="_blank" rel="noopener">corr dm correcteur python</a></summary>
+<p><img src="https://minio.apps.education.fr/codimd-prod/uploads/upload_4332f9a7842afbc60cea866126c2d8f2.png" alt="" class="md-image md-image"><br>
+<img src="https://minio.apps.education.fr/codimd-prod/uploads/upload_8002998513419a7cff7a1b2f64554cdc.png" alt="" class="md-image md-image"><br>
+<img src="https://minio.apps.education.fr/codimd-prod/uploads/upload_5d7cd6baf3d174c959f9d7c8d4b36c1d.jpg" alt="" class="md-image md-image"></p>
+</details>
+</blockquote>
+<p>** crypto**<br>
+<a href="https://sites.google.com/view/tqueneau/expert/arithm%C3%A9tique/crypto?read_current=1" target="_blank" rel="noopener">tqueneau/expert/arithmetique/crypto</a><br>
+<a href="https://www.lelivrescolaire.fr/page/12245048?docId=vbfVaJDIrcpqY6eiSudUE" target="_blank" rel="noopener">ex 126 chiffrage affine</a><br>
+<a href="https://notebook.basthon.fr/?ipynb=eJy9VVlv2kAQ_ivTlSLsgFovBFCQeAi5b3KQq4OQsTdhVXtsrdeqEfJ_7xpISSVSqQXhp7nnm5nP2gmLXT1iLdYjLXUg_K8yHtOQVRi5oVhm9yLSgjRrTZgngiBhre8TFgrt-q52C6tWaaKFz1pGEHllGjXQ47io5kW-MDWSKFVeofviFQqbFdotJDCfEjpVBNbudliu21vVBtJrpECCJFAuvQmr2niPjZUkbXkjZTXqZWlX5tK0oLRt23QSmfBSLSMaeFFaoOb1CotSHad6hnwmv-NLtBJuaPK0yEww24MjpA5cI-3DE9IBHCMdQhfpCJ6RjuEE6QRukE7hBekMTpHO4RbpAvaQLuEM6QrukK6hg9SFc6QbuEe6hX2kO7hAuoceUg8OkB7gEukRHpCe4BDpGa6QXuARaXGJRPsGLMv7eeX_Fx4p3yq5paWr2f3bZmbRYqBEkgb6k_TfiMz2vsWBK8lk7jaZAfUBcL7aCNMrN5Yf11lthCJ_6QylTmm9Q2RtB-nnSAYCLIvXtjN7izc5t7-0-ZzcWTsrc6QZx7Pl4_4LlblTr62dTkNJVrO5FFx1tVNUP7uEM-SOw7nD13yRYs0lU5bzUqW6WXZVa-sdZYM_9yagUxoEH9H38_4fLdkPoUgESSy8QpvzOx7rUUQ1U9CXiYE7Hswd3akDCk9gHpTUfVuEs9zgo6F5cULXdN5ZKINQUqQML_P8F5TIcD0" target="_blank" rel="noopener">ex126 python</a><br>
+<strong>DS</strong><br>
+<a href="https://www.lelivrescolaire.fr/page/15311186" target="_blank" rel="noopener">A faire </a></p>
+</details>
+</blockquote>
+</details><details><summary><strong>Matrices</strong> <img src="https://minio.apps.education.fr/codimd-prod/uploads/upload_5d9b60a1eb9fc0c9fa6bc776087f4e52.png" alt="" width="20" class="md-image md-image"></summary>
+<blockquote>
+<details><summary>ven. 25 nov. 2022</summary>
+<p><a href="https://sites.google.com/view/tqueneau/expert/matrices-et-graphes/matrices-et-op%C3%A9rations" target="_blank" rel="noopener">tqueneau - Matrices et opérations</a><br>
+<a href="https://www.lelivrescolaire.fr/page/14234834" target="_blank" rel="noopener">act A</a><br>
+<strong>lighs out</strong><br>
+<a href="https://sites.google.com/view/mathsjeu/lighs-out" target="_blank" rel="noopener">mathsjeu - lighs out</a><br>
+<a href="http://revue.sesamath.net/IMG/zip/lightsouts-math-1.0.zip" target="_blank" rel="noopener">le jeu!!</a><br>
+<strong>exo</strong><br>
+<a href="https://www.lelivrescolaire.fr/page/14235567" target="_blank" rel="noopener">Travailler les automatismes | Lelivrescolaire.fr</a><br>
+<a href="https://www.lelivrescolaire.fr/page/14235287" target="_blank" rel="noopener">1. exos Notion de matrice | Lelivrescolaire.fr</a><br>
+exo 20 23 24 44<br>
+<a href="http://www.maths-au-quotidien.fr/lycee/docs/hill.pdf" target="_blank" rel="noopener">http://www.maths-au-quotidien.fr/lycee/docs/hill.pdf</a></p>
+</details>
+</blockquote>
+<blockquote>
+<details><summary>ven. 2 déc. 2022</summary>
+<p><img src="https://minio.apps.education.fr/codimd-prod/uploads/upload_1f26dac4904af6971fc8bc7db0b398b6.png" alt="" class="md-image md-image"><br>
+<img src="https://minio.apps.education.fr/codimd-prod/uploads/upload_8ac8bcdf3a6f985def1131cdccb3ef5a.png" alt="" class="md-image md-image"><br>
+<strong>matrice inversible</strong><br>
+<a href="https://sites.google.com/view/tqueneau/expert/matrices-et-graphes/matrices-inversibles-et-application-aux-syst%C3%A8mes" target="_blank" rel="noopener">tqueneau - Matrices inversibles et application aux systèmes</a><br>
+<a href="https://www.lelivrescolaire.fr/page/14235128?docId=arPZCekEAgwxCAPwBG6i8" target="_blank" rel="noopener">matrice INVERSIBLE</a><br>
+<a href="https://www.lelivrescolaire.fr/page/14245764" target="_blank" rel="noopener">Synthèse | Lelivrescolaire.fr</a><br>
+<a href="https://www.lelivrescolaire.fr/page/14019246" target="_blank" rel="noopener">Le pivot de Gauss | Lelivrescolaire.fr</a><br>
+A faire:copier p182</p>
+</details>
+</blockquote>
+<blockquote>
+<details><summary>ven. 9 déc. 2022</summary>
+<p><a href="https://www.think-maths.co.uk/sites/default/files/2018-01/think_maths_-_sierpinski_tetrahedron_worksheet.pdf" target="_blank" rel="noopener">noel</a><br>
+<a href="https://www.think-maths.co.uk/sites/default/files/2018-01/think_maths_-_menger_sponge_worksheet.pdf" target="_blank" rel="noopener">noel2</a><br>
+<img src="https://minio.apps.education.fr/codimd-prod/uploads/upload_b473919787b760e6475dc8e95da8cefa.png" alt="" class="md-image md-image"><br>
+<a href="https://drive.google.com/file/d/0B5GmC42p4ELYREtTaTJzYUMtNm8/view?usp=sharing&amp;resourcekey=0-LLliBfnrlDUYN-Nplti8-w" target="_blank" rel="noopener">repartition chaleur</a><br>
+<a href="https://sites.google.com/view/tqueneau/expert/matrices-et-graphes/matrices-inversibles-et-application-aux-syst%C3%A8mes/interpolation-polynomiale-bezier" target="_blank" rel="noopener">Bezier</a><br>
+<a href="https://drive.google.com/file/d/1L0mUO4lrWaESd5Z9I0bV1ghMOx7pHoy0/view?usp=sharing" target="_blank" rel="noopener">diagonalisation hp</a></p>
+<p><strong>matrice transformation géométrique</strong><br>
+<a href="https://sites.google.com/view/mathsjeu/jeu-avec-les-pixels-photomaton" target="_blank" rel="noopener">https://sites.google.com/view/mathsjeu/jeu-avec-les-pixels-photomaton</a><br>
+<img class="emoji" alt=":desktop_computer:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/desktop_computer.png">  <a href="http://www.ac-grenoble.fr/maths/PM/Ressources/568/TP_fractales_Python.pdf" target="_blank" rel="noopener">salle info sujet</a>, <a href="https://console.basthon.fr/?script=eJyNUktuwjAQ3UfKHUZigQOBJkjdVGXVSu0dUFUZmJCRjG0cpyRH4hxcrHY-JUVFxYsk8_wyb2be0F4rY2HPrRbKClrPde2_gBeghQ2DzKg9GC637kUNeRIGYSDXWpG0xTJN3AmDETQxkCRLXISBhiWwJIYk8vQtZmBdliJTxmmRkp8p09FTGIA7lePqVfLRRnUTpV1Upctk_jipZv5Zd4wOmw4wg7Y00tHjOr2huLhbcTaQnKa_RWf3iuJFDkbwkiuqgIvziVtFBoHxL9zA-XQoSRu15msSZM-nCFBady2wgC2W1VUTHoRMyU0TtNktGb7DZWsSi1qQsg6H5_RhAX0hvr-4afgPO1oOigL_5y9--P0QHK2fwcbVZk3ZFMl0DP22DMe_8vMfGLDyDnSxkwFyu-QXb4fs-nd_9LAk_CmmyT7nWqPcMq8wwOsLnnb4CN4M1zkdSmx5bufnfv-ZbyeGsRpHlwtLViAbv7qxKumNeEfa5UdeD0lFro69CWFwcxI94Rvmu_zo" target="_blank" rel="noopener">salle info script python</a></p>
+<p><a href="https://notebook.basthon.fr/?ipynb=eJzdV81y4jgQfpUu5xBDHILNz7DMcpjdrZ057mVOIZUStgiqEZKQ5R1cKd5neA5ebFqyMQ4FCexkprbiA1K3uvW11N1fiUdPETPzht5nYZjhNGkxlYuJF3iCzOkhfSyFocJ4w0cvppyn3vD20ZtTQxJiiNUanaWGJt4QJzTw0lhLzrfyKnBe9yZXdvdYJhT3TGWmYyuzuZLawJwYxaXhbNJSuZ0BSUFxMxZTLeegiUhwKIybYzEWYqIkEyYdhW38xuICnAxMMMMIHwsFI_DbAbQb1jyhUzC4SzqVGrGYFPehrxrDsQD8lmirbtt3hZQ7KSylZThqt3rN5bX9zUuLUndV02lqMi3QPMjDI4jRyYjXNcir8Cno9amgdAcHF_DnTLIlEL5ZEyOZpuCTf2kMm_UiY0rLCZkwzsxm3QDMNS5zmkJCs-XeIawSplLETih2N0yTBzoqkuQ3CiWblnr4PbyJYBuIPV_gDnwgHYUN5Sl92T6q7LeXgGbbO8CSTbH4XJC-CmBbLfXrv7X3X0vArc1AKSMMMKwlW3gP1N93t5-qh0SrYNzuLaIUFYlvEWr6fKcPS_0FfNREzdgio4Ud1nzL1r9vjxPApbxs7BZcY_qXf-G1SmET8Ymyh9lXkteN0pn8uk3CWBy9ia3BWGA70iWNM3etscxsq4uM88CTmVGZsQ1_twqe6fm30OO2sbDZ2rtmc_0d9nfKV23xdmtQNHO7-wS20FjogWv-Vv8QeJG7AwF0zgggcvhR_-mxW1HHwUfRcfiD0N1z6C0s6DMa7B8ew3EL7lZa3e6PE92Oz7rPklkAdR7ENSmEG9EF-OVmLdBys4YhYIpCeA82RW5ovyuH0_jQuZ9FiOhc8x70z2DHfeffOi9Dd87k4u6b4OI97j1IvX_L7GHzDcsJC-cPokXK6THyfZZ7_zesq3JOJiXpQvMIFTslbjSrDOFsfo4ts_R6Y6Fx8g7HBY79CCcfsO8VuxngLBrhpPcaD7aKUuKf8kDTzVim_oewgRSqmykTbm4Zq-feZ9V6FcfOanm1886v4tK-XP1JZL8oEKNavFE93mq9indRWVXxlh79Zlz6lBaH7_fVX6NGM5m-wnMUwpsTOPAY_UJ0ind0JoN23gSDvvCaPcionwXMZbL5xh2nTjWJDeFgOQ2Inmj6n562v4BeTwO4C54AfKFaYEEoGlup_MOtcjOTooMbJixVnOT35cI_bgHsCsfMZVh_lbm3wvjEpKggb9jdCfdzJqT2htFq9R2wOQos" target="_blank" rel="noopener">.</a></p>
+<p>III.matrice transformation géométrique<br>
+exos<br>
+<a href="https://nuage03.apps.education.fr/index.php/s/rrZmm2SPMNrqZsG" target="_blank" rel="noopener">ie possible</a> <a href="https://nuage03.apps.education.fr/index.php/s/t9reyqCASe3igfT" target="_blank" rel="noopener">et son corr</a><br>
+<a href="https://view.genial.ly/5fd4f9203c971e0d65984aca" target="_blank" rel="noopener"><img src="https://minio.apps.education.fr/codimd-prod/uploads/upload_67faafc6d86cf45a0c322f8ee7d95d3e.png" alt="https://minio.apps.education.fr/codimd-prod/uploads/upload_67faafc6d86cf45a0c322f8ee7d95d3e.png  =200x" width="200" class="md-image md-image"></a></p>
+</details>
+</blockquote>
+<blockquote>
+<details><summary>ven. 16 déc. 2022</summary>
+<p><a href="https://sites.google.com/view/tqueneau/expert/matrices-et-graphes/matrices-et-op%C3%A9rations/transformation-g%C3%A9om%C3%A9trique" target="_blank" rel="noopener">transformation-géométrique</a><br>
+<a href="https://www.lelivrescolaire.fr/page/14235567?goTo=KdRnotZSZJu1qEx4SFlJd" target="_blank" rel="noopener">ex30</a><br>
+<a href="https://www.lelivrescolaire.fr/page/14019816" target="_blank" rel="noopener">fougere p188</a><br>
+<a href="https://sites.google.com/view/tqueneau/expert/matrices-et-graphes/matrices-et-op%C3%A9rations/image" target="_blank" rel="noopener">image</a><br>
+<a href="https://sites.google.com/view/tqueneau/expert/matrices-et-graphes/matrices-et-op%C3%A9rations/jeu-de-grille" target="_blank" rel="noopener">jeu-de-grille</a><br>
+<a href="https://youtu.be/Xtt7I-Q7Iow" target="_blank" rel="noopener">https://youtu.be/Xtt7I-Q7Iow</a><br>
+<a href="https://youtu.be/8D_ThIqoJL8" target="_blank" rel="noopener">https://youtu.be/8D_ThIqoJL8</a></p>
+</details>
+</blockquote>
+<p><img class="emoji" alt=":pencil:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/pencil.png"> <a href="https://codimd.apps.education.fr/s/oj4y9Iwl7" target="_blank" rel="noopener">dm noel Lire et résumer</a>!!</p>
+<h4 id="noel-"><a class="anchor hidden-xs" href="#noel-" title="noel-"><i class="fa fa-link"></i></a>noel <img class="emoji" alt=":christmas_tree:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/christmas_tree.png"> <img class="emoji" alt=":star:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/star.png"> <img class="emoji" alt=":confetti_ball:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/confetti_ball.png"></h4>
+</details><details><summary><strong>Complexes (géométrique)</strong> <span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-6-Frame" tabindex="0" style="position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mi mathvariant=&quot;double-struck&quot;>C</mi></mrow></math>" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-28" style="width: 0.811em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.703em; height: 0px; font-size: 116%;"><span style="position: absolute; clip: rect(1.727em, 1000.65em, 2.751em, -999.997em); top: -2.584em; left: 0em;"><span class="mrow" id="MathJax-Span-29"><span class="texatom" id="MathJax-Span-30"><span class="mrow" id="MathJax-Span-31"><span class="mi" id="MathJax-Span-32" style="font-family: MathJax_AMS;">C</span></span></span></span><span style="display: inline-block; width: 0px; height: 2.589em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.059em; border-left: 0px solid; width: 0px; height: 0.941em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow class="MJX-TeXAtom-ORD"><mi mathvariant="double-struck">C</mi></mrow></math></span></span><script type="math/tex" id="MathJax-Element-6">\mathbb{C}</script></span></summary>
+<blockquote>
+<details><summary>ven. 6 janv. 2023</summary>
+<p><a href="https://sites.google.com/view/tqueneau/expert/matrices-et-graphes/matrices-et-op%C3%A9rations/transformation-g%C3%A9om%C3%A9trique" target="_blank" rel="noopener">Photomaton</a>, <a href="https://sites.google.com/view/tqueneau/expert/matrices-et-graphes/matrices-et-op%C3%A9rations/image" target="_blank" rel="noopener">image</a>, JEU DE LA VIE<br>
+<a href="https://sites.google.com/view/tqueneau/expert/complexes/complexe-g%C3%A9om%C3%A9trique" target="_blank" rel="noopener">site prof complexes geométriques</a><br>
+<a href="https://www.lelivrescolaire.fr/page/11254358" target="_blank" rel="noopener">ACT</a><br>
+<a href="http://maths-lfkl.e-monsite.com/medias/files/2.nombres-complexes-partie-2.pdf" target="_blank" rel="noopener">cours sur poly/ I Affixe</a><br>
+II.Module et début arg<br>
+<a href="https://nuage03.apps.education.fr/index.php/s/3nbbtfkbxgnsFz4" target="_blank" rel="noopener">correction dm matrices</a><br>
+A faire:ex 28 29 30</p>
+</details>
+</blockquote>
+<p><img class="emoji" alt=":pencil:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/pencil.png"> <a href="https://tfjm.org/wp-content/uploads/2023/01/Problemes-2023_01_03.pdf" target="_blank" rel="noopener">tfjm</a></p>
+<blockquote>
+<details><summary>ven. 13 janv. 2023</summary>
+<p>III. Argument d’un nombre complexe.<br>
+IV. Forme trigonométrique d’un nombre complexe<br>
+<a href="https://codimd.apps.education.fr/s/GM6skNwyI" target="_blank" rel="noopener">fig</a></p>
+<blockquote>
+<details><summary>demo</summary>
+<p><img src="https://minio.apps.education.fr/codimd-prod/uploads/upload_30c0f154f42b05e1601a3826fd508efd.png" alt="" class="md-image md-image"></p>
+</details>
+</blockquote>
+<p><a href="https://sites.google.com/view/mathsjeu/jeu-video-comment-sont-ils-faits" target="_blank" rel="noopener">math pixar</a><br>
+ex 31p67<br>
+A faire:32 34p67<br>
+<a href="https://www.lelivrescolaire.fr/page/12639114" target="_blank" rel="noopener">affixe exo 18 51 53 54 56 </a><br>
+<a href="https://www.lelivrescolaire.fr/page/12093245" target="_blank" rel="noopener">EX 131 139</a><br>
+<img src="https://minio.apps.education.fr/codimd-prod/uploads/upload_29ffb9b651fae047a8f9233264ce9c11.png" alt="" class="md-image md-image"></p>
+</details>
+</blockquote>
+<blockquote>
+<details><summary>ven. 20 janv. 2023</summary>
+<p><img src="https://minio.apps.education.fr/codimd-prod/uploads/upload_a72c4667f6978ec53588c09dae8f621f.png" alt="" class="md-image md-image"></p>
+<blockquote>
+<p><a href="https://www.lelivrescolaire.fr/page/12093245" target="_blank" rel="noopener">ex131 rev</a><br>
+<a href="https://www.lelivrescolaire.fr/page/12639359" target="_blank" rel="noopener">ex81</a><br>
+<a href="http://maths-lfkl.e-monsite.com/medias/files/3.nombres-complexes-partie-3.pdf" target="_blank" rel="noopener">cours Poly Forme exponentielle</a><br>
+<a href="https://codimd.apps.education.fr/p/knXB1ueAS" target="_blank" rel="noopener">cercle dans cercle</a></p>
+</blockquote>
+</details>
+</blockquote>
+<p><strong>bac blanc en spé</strong></p>
+<blockquote>
+<details><summary>ven. 27 janv. 2023 <strong>bac blanc en math expert !</strong></summary>
+<p><mark><a href="https://notebook.basthon.fr/?from=https://raw.githubusercontent.com/PythonLycee/PyLyc/master/Mandelbrot_Complexe_vd.ipynb" target="_blank" rel="noopener">tp mandelbrot</a></mark><br>
+<a href="https://notebook.basthon.fr/?from=https://raw.githubusercontent.com/PythonLycee/PyLyc/master/Julia_Complexe_vd.ipynb" target="_blank" rel="noopener">tp bonus julia</a><br>
+A faire:dm</p>
+</details>
+</blockquote>
+<blockquote>
+<details><summary>ven. 3 févr. 2023</summary>
+<p>recup dm<br>
+<a href="http://maths-lfkl.e-monsite.com/medias/files/3.nombres-complexes-partie-3.pdf" target="_blank" rel="noopener">cours Poly formules euler, appli géom, racines nimes</a><br>
+<a href="https://www.lelivrescolaire.fr/page/12612466" target="_blank" rel="noopener">corr ex 35 36, ex </a><br>
+<a href="https://www.lelivrescolaire.fr/page/12639359" target="_blank" rel="noopener">ex …</a><br>
+ex 136p77 ex1,2p65 143p78 144 tfd<br>
+<a href="https://www.geogebra.org/classic/bmb5f2ja" target="_blank" rel="noopener">pentagone</a></p>
+</details>
+</blockquote>
+</details><details><summary><strong>PGCD</strong><img src="https://minio.apps.education.fr/codimd-prod/uploads/upload_a5b8c56f90aa98aaade9950b0ef460e7.png" alt="" width="30" class="md-image md-image"></summary>
+<blockquote>
+<details><summary>ven. 10 févr. 2023</summary>
+<p>fin pentagone, <a href="https://sites.google.com/view/tqueneau/expert/complexes/complexe-g%C3%A9om%C3%A9trique/transformation-de-fourier-discr%C3%A8te" target="_blank" rel="noopener">tfd</a><br>
+</p><div class="youtube" data-videoid="yYEMxqreA10"><iframe frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" src="https://www.youtube.com/embed/yYEMxqreA10"></iframe></div><br>
+<a href="https://lms.fun-mooc.fr/courses/course-v1:Polytechnique+03019+session01/info" target="_blank" rel="noopener">mooc rubiks and …</a><br>
+DS 1H complexes<br>
+<a href="https://sites.google.com/view/tqueneau/expert/arithm%C3%A9tique/pgcd" target="_blank" rel="noopener">https://sites.google.com/view/tqueneau/expert/arithmétique/pgcd</a><br>
+<a href="https://mep-outils.sesamath.net/manuel_numerique/diapo.php?atome=88631&amp;ordre=1" target="_blank" rel="noopener">pgcd par le calcul et les carrés</a><br>
+<a href="https://mep-outils.sesamath.net/manuel_numerique/diapo.php?atome=88632&amp;ordre=1" target="_blank" rel="noopener">PGCD SOUSTRACTION</a><br>
+<a href="https://www.lelivrescolaire.fr/page/600715?goTo=67" target="_blank" rel="noopener">ex 67 demo pgcd soust</a><br>
+<a href="https://www.lelivrescolaire.fr/page/599318?goTo=29" target="_blank" rel="noopener">ex 29 30 74</a><br>
+A faire:fin 67-4)34p132 66p134 70 75<p></p>
+</details>
+</blockquote>
+<p><strong>vac hiver</strong> <img class="emoji" alt=":ski:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/ski.png"> <img class="emoji" alt=":snowflake:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/snowflake.png"></p>
+<blockquote>
+<details><summary>ven. 3 mars 2023</summary>
+<p><a href="https://www.lelivrescolaire.fr/page/599318?goTo=34" target="_blank" rel="noopener">correction fin 67-4)34p132 66p134 70 75</a></p>
+<blockquote>
+<details><summary>corr 75</summary>
+<p>si a⩾b, alors d=PGCD(a−b;b).<br>
+Supposons que  a⩾b. Puisque  P divise  a et  b, alors  P divise  a−b. Ainsi,  P est un diviseur commun à  a−b et  b, et donc  P⩽PGCD(a−b;b).<br>
+Réciproquement, si  d est un diviseur commun à  a−b et  b, alors  d divise  (a−b)+b=a, donc  d est un diviseur commun à  a et  b. En particulier,  PGCD(a−b;b) est un diviseur commun à  a et  b, donc  PGCD(a−b;b)⩽P.<br>
+On vient de montrer qu’on a à la fois  P⩽PGCD(a−b;b) et  PGCD(a−b;b)⩽P donc, en conclusion,  P=PGCD(a−b;b</p>
+</details>
+</blockquote>
+<ul>
+<li>pgcd Euclide</li>
+<li><a href="https://fr.wikipedia.org/wiki/Fraction_continue#De_l.27algorithme_d.27Euclide_aux_fractions_continues" target="_blank" rel="noopener">fractions continues</a> , <a href="http://villemin.gerard.free.fr/Wwwgvmm/Nombre/FCrectan.htm" target="_blank" rel="noopener">fractions continues2</a> ,<a href="https://sites.google.com/view/tqueneau/expert/arithm%C3%A9tique/pgcd/fraction" target="_blank" rel="noopener">fractions continues3</a></li>
+</ul>
+<blockquote>
+<details><summary>bachet bezout</summary>
+<p><img src="https://minio.apps.education.fr/codimd-prod/uploads/upload_04ce90a1a8aee8fe9c2db6730af0df06.png" alt="" class="md-image md-image"></p>
+</details>
+<details><summary>pgcd 26 et 15!</summary>
+<p><img src="https://minio.apps.education.fr/codimd-prod/uploads/upload_d5f54815f3c68f8c5dd5eb6fc289f1bd.png" alt="" class="md-image md-image"></p>
+</details>
+</blockquote>
+<p><a href="https://drive.google.com/file/d/1y5TRP9WFp9QFh1nY8ashftDXkX2YN3zP/view?usp=sharing" target="_blank" rel="noopener">cours</a><br>
+<a href="https://wims.univ-cotedazur.fr/wims/wims.cgi?session=QG689E45B0.3&amp;+lang=fr&amp;+module=adm%2Fsheet&amp;+job=read&amp;+sh=fr%2FH6%2F1143%2Fsheet16" target="_blank" rel="noopener">wims coeff id bezout</a><br>
+46p133 47 48 50<br>
+A faire: 86 90</p>
+</details>
+</blockquote>
+<p><img class="emoji" alt=":pencil:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/pencil.png"> <strong>Semaine des Maths 2023</strong><br>
+<img src="https://minio.apps.education.fr/codimd-prod/uploads/upload_765b47f0507194453f27dd23d2e3afc2.png" alt="" width="200" class="md-image md-image"><img src="https://minio.apps.education.fr/codimd-prod/uploads/upload_6c8df99c0b9f746e8fa88bb9c72bbc79.png" alt="" width="200" class="md-image md-image"><br>
+<a href="https://sites.google.com/view/mrchretien/semaine-des-maths" target="_blank" rel="noopener">https://sites.google.com/view/mrchretien/semaine-des-maths</a>    <a href="http://tinyurl.com/mathsalacarte" target="_blank" rel="noopener">tinyurl.com/mathsalacarte</a></p>
+<blockquote>
+<details><summary><s>ven. 10 mars 2023</s></summary>
+<p>absent</p>
+</details>
+</blockquote>
+<blockquote>
+<details><summary>ven. 17 mars 2023</summary>
+<p>REV bac…</p>
+</details>
+</blockquote>
+<blockquote>
+<details><summary>ven. 24 mars 2023</summary>
+<blockquote>
+<p><a href="https://www.lelivrescolaire.fr/page/599318?goTo=34" target="_blank" rel="noopener">corr 48 86</a><br>
+IE??<br>
+<a href="http://www.maths-au-quotidien.fr/automaths.php" target="_blank" rel="noopener">http://www.maths-au-quotidien.fr/automaths.php</a><br>
+<a href="https://www.lelivrescolaire.fr/page/594095" target="_blank" rel="noopener">ex 114 demo th bezout</a><br>
+id Bézout,equations diophantinennes<br>
+<a href="https://www.lelivrescolaire.fr/page/599318?goTo=50" target="_blank" rel="noopener">ex 50</a><br>
+<a href="https://www.lelivrescolaire.fr/page/598267" target="_blank" rel="noopener">Chiffrement affine p130</a><br>
+A faire:<br>
+<a href="https://notebook.basthon.fr/?ipynb=eJydUtuOnDAM_ZXIT7BLL7DtaovUf-j7gEZZMJBucNKQtExH_HsdLjtdqU9FQvHlnGM7zhUa1HqC8nSFEb1spZdQXsG7MHlsoWQDl2xFnf3FIpTQmBYhg8kE10S_c2YUo_SDUKM1zotOG-MqqqgZVNc52aP4Kk51RWOkRvspE8XnTMQjz8QXPj5mIn_gfw8VRYS3eBDYk9oOku0K5HPTYtcP6vuLHsnYH27y4eev-fK7glhES-VWoIh-RZ1xYhaKhJPUY1I8pmVFgr_X_t5La5HaJM_v5vund8Xj3TpDsgfSD8xJDyl1k9JIyTpUekgSF77JKmpx3hAnVacbZB_rqElH-Oh7N-7FOvGJ6ljYOkU-2VJM4PvHGZvglaFzYwJ5KPMMTPA2-G2dm30sbfIO5cg0jzNjgcUl-cCq_apGctxgLfNgqZfs_x_Ev5qjoPXf_dVLnb0p8IKOUE8Wm-jt7diLHww9sGCrJqvl5bwnvq0JETM8Rx_4sl_hsHB_9Myr4kcJ5aebcx4VGQdlsfwBEwf_Dw" target="_blank" rel="noopener">Chiffrement affine p130 fichier python</a><br>
+EX93 CHIFFREMENT++<br>
+ie rapide id bezout<br>
+th gauss<br>
+<img src="https://minio.apps.education.fr/codimd-prod/uploads/upload_ecbae246b0adee83e00a3dd059a926e2.png" alt="" class="md-image md-image"><br>
+eqn diophantiennes<br>
+<a href="https://www.lelivrescolaire.fr/page/599318" target="_blank" rel="noopener">ex51,52</a><br>
+A faire corr 59 et 102p138</p>
+</blockquote>
+</details>
+</blockquote>
+<blockquote>
+<details><summary><s>ven. 31 mars 2023</s> irem</summary>
+</details>
+</blockquote>
+</details><details><summary><strong>Graphes</strong><img src="https://minio.apps.education.fr/codimd-prod/uploads/upload_9cf44e982909984c1dbc94ce521b7dc7.png" alt="Graphes" width="40" class="md-image md-image"></summary>
+<blockquote>
+<details><summary>ven. 7 avr. 2023</summary>
+<p><a href="https://drive.google.com/file/d/1oiDlKKdkxBFlOmXbj-0oQ9G1nFn0cL3m/view?usp=sharing" target="_blank" rel="noopener">corr dm hill</a><br>
+corr 59 et 102p138<br>
+<img src="https://minio.apps.education.fr/codimd-prod/uploads/upload_a2be1573abd3433d8ac52b9e7d67ded5.png" alt="" width="100" class="md-image md-image"><br>
+<a href="https://www.lelivrescolaire.fr/page/594095" target="_blank" rel="noopener">115</a><br>
+<a href="http://jaicompris.com/lycee/math/arithmetique/theoreme-gauss.php" target="_blank" rel="noopener">jai compris gauss&amp;co ex2</a></p>
+<blockquote>
+<details><summary>non abordé</summary>
+<ul>
+<li><a href="https://p.calameoassets.com/200417160545-aa02638926ef6fc08f708cd3703e875a/p153.jpg" target="_blank" rel="noopener">p153.jpg (1105×1590)</a></li>
+<li><a href="https://p.calameoassets.com/200417160545-aa02638926ef6fc08f708cd3703e875a/p154.jpg" target="_blank" rel="noopener">p154.jpg (1105×1590)</a></li>
+<li><a href="https://p.calameoassets.com/200417160545-aa02638926ef6fc08f708cd3703e875a/p159.jpg" target="_blank" rel="noopener">p159.jpg (1105×1590)</a></li>
+<li><a href="https://biblio.nathan.fr/epubs/NATHAN/bibliomanuels/distrib_gp/1/10/9233/online/OEBPS/Chapter_009/Page_00017.xhtml" target="_blank" rel="noopener">Hyperbole Terminale - Option Maths Expertes</a></li>
+<li><a href="https://biblio.nathan.fr/epubs/NATHAN/bibliomanuels/distrib_gp/1/10/9233/online/OEBPS/Chapter_009/Page_00018.xhtml" target="_blank" rel="noopener">Hyperbole Terminale - Option Maths Expertes</a></li>
+<li><a href="https://biblio.nathan.fr/epubs/NATHAN/bibliomanuels/distrib_gp/1/10/9233/online/OEBPS/Chapter_009/Page_00019.xhtml" target="_blank" rel="noopener">Hyperbole Terminale - Option Maths Expertes</a></li>
+<li><a href="https://biblio.nathan.fr/epubs/NATHAN/bibliomanuels/distrib_gp/1/10/9233/online/OEBPS/Chapter_009/Page_00020.xhtml" target="_blank" rel="noopener">Hyperbole Terminale - Option Maths Expertes</a></li>
+<li><a href="https://biblio.nathan.fr/epubs/NATHAN/bibliomanuels/distrib_gp/1/10/9233/online/OEBPS/Chapter_009/Page_00022.xhtml" target="_blank" rel="noopener">Hyperbole Terminale - Option Maths Expertes</a></li>
+<li><a href="https://biblio.nathan.fr/epubs/NATHAN/bibliomanuels/distrib_gp/1/10/9233/online/OEBPS/Chapter_009/Page_00023.xhtml" target="_blank" rel="noopener">Hyperbole Terminale - Option Maths Expertes</a></li>
+<li><a href="https://biblio.nathan.fr/epubs/NATHAN/bibliomanuels/distrib_gp/1/10/9233/online/OEBPS/Chapter_009/Page_00024.xhtml" target="_blank" rel="noopener">Hyperbole Terminale - Option Maths Expertes</a></li>
+<li><a href="https://biblio.nathan.fr/epubs/NATHAN/bibliomanuels/distrib_gp/1/10/9233/online/OEBPS/Chapter_009/Page_00025.xhtml" target="_blank" rel="noopener">Hyperbole Terminale - Option Maths Expertes</a></li>
+<li><a href="https://biblio.nathan.fr/epubs/NATHAN/bibliomanuels/distrib_gp/1/10/9233/online/OEBPS/Chapter_009/Page_00026.xhtml" target="_blank" rel="noopener">Hyperbole Terminale - Option Maths Expertes</a></li>
+<li><a href="https://biblio.nathan.fr/epubs/NATHAN/bibliomanuels/distrib_gp/1/10/9233/online/OEBPS/Chapter_009/Page_00028.xhtml" target="_blank" rel="noopener">Hyperbole Terminale - Option Maths Expertes</a></li>
+<li><a href="https://biblio.nathan.fr/epubs/NATHAN/bibliomanuels/distrib_gp/1/10/9233/online/OEBPS/Chapter_009/Page_00029.xhtml" target="_blank" rel="noopener">Hyperbole Terminale - Option Maths Expertes</a></li>
+</ul>
+</details>
+<details><summary>DM à faire SACADO+RSA pour le 1er avril</summary>
+<p><img src="https://p.calameoassets.com/200312163440-53e9ab47fb96a0afa6126fcebcecf638/p102.svgz" alt="" class="md-image md-image"><br>
+<img src="https://p.calameoassets.com/200312163440-53e9ab47fb96a0afa6126fcebcecf638/p100.svgz" alt="" class="md-image md-image"><br>
+<img src="https://p.calameoassets.com/200312163440-53e9ab47fb96a0afa6126fcebcecf638/p101.svgz" alt="" class="md-image md-image"></p>
+</details>
+</blockquote>
+<p><a href="https://fr.calameo.com/read/0054194173d36d18b3c56?page=95" target="_blank" rel="noopener">https://fr.calameo.com/read/0054194173d36d18b3c56?page=95</a><br>
+<img src="https://minio.apps.education.fr/codimd-prod/uploads/upload_4f3e3c18f8b966cd37d8340a297f9e1e.png" alt="" class="md-image md-image"><br>
+<strong><a href="https://sites.google.com/view/tqueneau/expert/matrices-et-graphes/g%C3%A9n%C3%A9ralit%C3%A9s-sur-les-graphes" target="_blank" rel="noopener">Graphes</a></strong><br>
+<a href="https://www.lelivrescolaire.fr/page/14234834" target="_blank" rel="noopener">act B p176</a><br>
+<a href="https://www.calameo.com/read/0005967295d0b5d5c47f6?authid=nDfde6HMoRP5&amp;page=179" target="_blank" rel="noopener">act B p176</a><br>
+<a href="https://www.lelivrescolaire.fr/page/14235244" target="_blank" rel="noopener">cours p183</a><br>
+<a href="https://www.lelivrescolaire.fr/page/14235567?goTo=kMso3ZrWqTpcMBuN9TDDF" target="_blank" rel="noopener">ex 33 34p190</a><br>
+<a href="https://www.lelivrescolaire.fr/page/14234834" target="_blank" rel="noopener">act C matrice et graphe p176</a><br>
+<a href="https://www.lelivrescolaire.fr/page/13350894" target="_blank" rel="noopener">cours graphe et matrice</a><br>
+<a href="https://www.calameo.com/read/0005967295d0b5d5c47f6?authid=nDfde6HMoRP5&amp;page=184" target="_blank" rel="noopener">LIVRE cours</a><br>
+<a href="https://www.lelivrescolaire.fr/page/14244851?goTo=84" target="_blank" rel="noopener">justif84p198</a> ou <a href="https://www.lelivrescolaire.fr/page/15045350?docId=1BpD55cMCgwD7cpb1Qwx6" target="_blank" rel="noopener">démo tte faite </a><br>
+<a href="https://www.lelivrescolaire.fr/page/14235567?goTo=zijzns4dCNunLHYjOMOB0" target="_blank" rel="noopener">ex 38p191</a><br>
+<a href="https://www.lelivrescolaire.fr/page/14245764?goTo=99" target="_blank" rel="noopener">ex 99 chaine euler,100 coloriage</a><br>
+A faire: recopier le <a href="https://www.lelivrescolaire.fr/page/14235244" target="_blank" rel="noopener">cours p183</a>et <a href="https://www.lelivrescolaire.fr/page/13350894" target="_blank" rel="noopener">cours graphe et matrice</a></p>
+</details>
+</blockquote>
+<p><a href="https://nuage03.apps.education.fr/index.php/s/73KRC8nfEomTX55" target="_blank" rel="noopener">corr DM Sac à dos</a></p>
+<blockquote>
+<details><summary><s>ven. 14 avr. 2023</s>Philo</summary>
+</details>
+</blockquote>
+<p><strong>vac printemps</strong></p>
+</details><details><summary><strong>Matrices et suites</strong><img src="https://minio.apps.education.fr/codimd-prod/uploads/upload_b448d59c70ba2459a99aff9fda6d423d.png" alt="" width="100" class="md-image md-image"> 2 semaines</summary>
+<blockquote>
+<details><summary><s>ven. 5 mai 2023</s> bac blanc francais</summary>
+<p><a href="https://sites.google.com/view/tqueneau/expert/matrices-et-graphes/matrices-suites" target="_blank" rel="noopener">https://sites.google.com/view/tqueneau/expert/matrices-et-graphes/matrices-suites</a><br>
+<img src="https://minio.apps.education.fr/codimd-prod/uploads/upload_98593f7f4b6e9927cadaa9e9ce045628.png" alt="" class="md-image md-image"><br>
+<a href="https://www.lelivrescolaire.fr/page/14235323" target="_blank" rel="noopener">VERIF ACQUS GRAPHE</a><br>
+<a href="https://drive.google.com/file/d/1pFKwtddzzLE3ubu0KducMPAp8PSrzHtB/view?usp=sharing" target="_blank" rel="noopener">corr ex 99,100</a><br>
+<a href="https://www.lelivrescolaire.fr/page/14450781" target="_blank" rel="noopener">act nouveau chapitre 3,8</a><br>
+Correction Matrice Graphe Markov<br>
+<a href="https://www.lelivrescolaire.fr/page/14460636" target="_blank" rel="noopener">act A</a><br>
+<a href="https://www.lelivrescolaire.fr/page/14487100" target="_blank" rel="noopener">cours</a><br>
+<a href="https://www.lelivrescolaire.fr/page/14735845" target="_blank" rel="noopener">exos</a><br>
+A faire:</p>
+</details>
+</blockquote>
+<blockquote>
+<details><summary>ven. 12 mai 2023</summary>
+<p><a href="https://codimd.apps.education.fr/q3R-ZtMwR0eOHcnrMjtuYw" target="_blank" rel="noopener">magie de bruijn</a><br>
+<a href="https://blogdemaths.wordpress.com/2015/02/23/arnaquez-vos-amis-a-pile-ou-face/" target="_blank" rel="noopener">Arnaquez vos amis à Pile ou Face | Blogdemaths</a><br>
+<a href="https://www.lelivrescolaire.fr/page/14501287" target="_blank" rel="noopener">Cours2. Chaînes de Markov  </a><br>
+<a href="https://www.lelivrescolaire.fr/page/14599293?goTo=29" target="_blank" rel="noopener">ex 29à31</a><br>
+<a href="https://www.lelivrescolaire.fr/page/14536389" target="_blank" rel="noopener">3. Évolution d’une chaîne de Markov | Lelivrescolaire.fr</a><br>
+<a href="https://www.lelivrescolaire.fr/page/14599293?goTo=36" target="_blank" rel="noopener"> 33 et 34 p. 221</a>, <a href="https://www.lelivrescolaire.fr/page/14599293?goTo=36" target="_blank" rel="noopener">puis  35 et 36 p. 221</a><br>
+A faire: <a href="https://doctools.dgpad.net/exam.php?datas=eyJiYXNlaWQiOiIxUTZmbkFsMnA1RFlEVlVMS1ZDMDFfNW9fNjY0VW1OXzB2eUdYeWQ5R19UMCIsImRlX2Jhc2UiOiIxdGFaZmJINDZOQ054Z3BTWGxtWEtPdTJnbFI0RDJjMzMtdHVHVDRFWmFhdyIsImlkIjoiMUhzeTMzUnY4NzdiX1kycE80NXJZVFcxTGd1a290UUo4Ukg4UlozMW9PRVkiLCJ1c2VycyI6IkFub255bWUifQ==" target="_blank" rel="noopener">dm noté</a></p>
+</details>
+</blockquote>
+<blockquote>
+<details><summary><s>ven. 19 mai 2023</s></summary>
+</details>
+</blockquote>
+</details><details><summary><strong>Nombres Premiers</strong><img src="https://minio.apps.education.fr/codimd-prod/uploads/upload_e178f0b17b7c3a0890336a943bf2192c.png" alt="" width="50" class="md-image md-image"></summary>
+</details><blockquote>
+<details><summary>ven. 26 mai 2023</summary>
+<p><a href="https://drive.google.com/file/d/1xa7WPeGDSLWrosgfn92dAvLmfG6uCt33/view?usp=sharing" target="_blank" rel="noopener">Google: page rank TD</a><br>
+<a href="https://drive.google.com/file/d/1HPRWvw7j1r-Y4YJYN85Myo2-VWuveMHF/view?usp=sharing" target="_blank" rel="noopener">Google: page Rank cours</a><br>
+<a href="https://sites.google.com/view/tqueneau/expert/matrices-et-graphes/matrices-suites/algorithme-pagerank" target="_blank" rel="noopener">https://sites.google.com/view/tqueneau/expert/matrices-et-graphes/matrices-suites/algorithme-pagerank</a><br>
+<a href="https://codimd.apps.education.fr/MAwMVm1IT3GjDqyBuB4NlQ" target="_blank" rel="noopener">diapo page rank</a></p>
+<p><a href="https://sites.google.com/view/tqueneau/expert/arithm%C3%A9tique/nombres-premiers" target="_blank" rel="noopener">https://sites.google.com/view/tqueneau/expert/arithmétique/nombres-premiers</a><br>
+<a href="https://www.lelivrescolaire.fr/page/14099355" target="_blank" rel="noopener">ACTs nb prems</a><br>
+Cours I. Ensemble nbre premiers<br>
+II.décomposition en facteur premier<br>
+<a href="https://sites.google.com/view/tqueneau/expert/arithm%C3%A9tique/nombres-premiers/d%C3%A9composition-en-facteur-premier" target="_blank" rel="noopener">https://sites.google.com/view/tqueneau/expert/arithmétique/nombres-premiers/décomposition-en-facteur-premier</a><br>
+<a href="https://www.lelivrescolaire.fr/page/13451024" target="_blank" rel="noopener">cours prems p148 à 150</a><br>
+<a href="https://sites.google.com/view/tqueneau/expert/arithm%C3%A9tique/nombres-premiers/petit-theoreme-de-fermat" target="_blank" rel="noopener">Petit th de Fermat:</a><br>
+<a href="https://codimd.apps.education.fr/s/Mkcp3ERrD" target="_blank" rel="noopener">PTIT FERMAT DEMO A TROU: complement devoir RSA</a><br>
+<a href="https://www.lelivrescolaire.fr/page/14257014?docId=wbZzYJOzPc9ogoJs2Bac2" target="_blank" rel="noopener">ex 79,80,82</a><br>
+<a href="https://www.lelivrescolaire.fr/page/14234184" target="_blank" rel="noopener">tp1 carmichael</a><br>
+<a href="https://www.apprendre-en-ligne.net/turing/enonces.php" target="_blank" rel="noopener">defi turing</a><br>
+<a href="https://colasbd.github.io/cdc/cahier_de_calcul_v10.pdf" target="_blank" rel="noopener">calcul prepa</a></p>
+</details>
+</blockquote><blockquote>
+<details><summary>ven. 2 juin 2023</summary>
+<ul>
+<li><a href="https://www.lelivrescolaire.fr/page/15184211" target="_blank" rel="noopener">Vers le supérieur - Nombres complexes | Lelivrescolaire.fr</a></li>
+<li><a href="https://www.lelivrescolaire.fr/page/15464706" target="_blank" rel="noopener">Vers le supérieur - Graphes et matrices | Lelivrescolaire.fr</a></li>
+<li><a href="https://sites.google.com/view/tqueneau/vers-le-sup%C3%A9rieur" target="_blank" rel="noopener">vers le sup tquneneau</a><br>
+<div class="youtube" data-videoid="du34gPopY5Y"><iframe frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" src="https://www.youtube.com/embed/du34gPopY5Y"></iframe></div><br>
+<div class="youtube" data-videoid="SccvFbyDaUI"><iframe frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" src="https://www.youtube.com/embed/SccvFbyDaUI"></iframe></div><br>
+<div class="youtube" data-videoid="lcVC2fqByEo"><iframe frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" src="https://www.youtube.com/embed/lcVC2fqByEo"></iframe></div><br>
+<a href="https://sites.google.com/view/isnq/hachage-bitcoin-blockchain" target="_blank" rel="noopener">https://sites.google.com/view/isnq/hachage-bitcoin-blockchain</a>}</li>
+</ul>
+</details>
+</blockquote></div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+                <div class="toc"><ul class="nav">
+<li class=""><a href="#cahier-de-texte-des-Experts" title="cahier de texte des Experts">cahier de texte des Experts</a></li>
+</ul>
+</div><div class="toc-menu" style="">
+    <a class="expand-toggle expand-all" href="#">Expand all</a>
+    <a class="expand-toggle collapse-all" href="#" style="display: none;">Collapse all</a>
+    <a class="back-to-top" href="#">Back to top</a>
+    <a class="go-to-bottom" href="#">Go to bottom</a>
+</div>
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;"  >
+        <div class="toc"><ul class="nav">
+<li class=""><a href="#cahier-de-texte-des-Experts" title="cahier de texte des Experts">cahier de texte des Experts</a></li>
+</ul>
+</div><div class="toc-menu" style="">
+    <a class="expand-toggle expand-all" href="#">Expand all</a>
+    <a class="expand-toggle collapse-all" href="#" style="display: none;">Collapse all</a>
+    <a class="back-to-top" href="#">Back to top</a>
+    <a class="go-to-bottom" href="#">Go to bottom</a>
+</div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.0/js/bootstrap.min.js" integrity="sha256-kJrlY+s09+QoWjpkOrXXwhxeaoDz9FW5SaxF8I0DibQ=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script>
+        var markdown = $(".markdown-body");
+        //smooth all hash trigger scrolling
+        function smoothHashScroll() {
+            var hashElements = $("a[href^='#']").toArray();
+            for (var i = 0; i < hashElements.length; i++) {
+                var element = hashElements[i];
+                var $element = $(element);
+                var hash = element.hash;
+                if (hash) {
+                    $element.on('click', function (e) {
+                        // store hash
+                        var hash = this.hash;
+                        if ($(hash).length <= 0) return;
+                        // prevent default anchor click behavior
+                        e.preventDefault();
+                        // animate
+                        $('body, html').stop(true, true).animate({
+                            scrollTop: $(hash).offset().top
+                        }, 100, "linear", function () {
+                            // when done, add hash to url
+                            // (default click behaviour)
+                            window.location.hash = hash;
+                        });
+                    });
+                }
+            }
+        }
+
+        smoothHashScroll();
+        var toc = $('.ui-toc');
+        var tocAffix = $('.ui-affix-toc');
+        var tocDropdown = $('.ui-toc-dropdown');
+        //toc
+        tocDropdown.click(function (e) {
+            e.stopPropagation();
+        });
+
+        var enoughForAffixToc = true;
+
+        function generateScrollspy() {
+            $(document.body).scrollspy({
+                target: ''
+            });
+            $(document.body).scrollspy('refresh');
+            if (enoughForAffixToc) {
+                toc.hide();
+                tocAffix.show();
+            } else {
+                tocAffix.hide();
+                toc.show();
+            }
+            $(document.body).scroll();
+        }
+
+        function windowResize() {
+            //toc right
+            var paddingRight = parseFloat(markdown.css('padding-right'));
+            var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+            toc.css('right', right + 'px');
+            //affix toc left
+            var newbool;
+            var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+            //for ipad or wider device
+            if (rightMargin >= 133) {
+                newbool = true;
+                var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+                var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+                tocAffix.css('left', left + 'px');
+            } else {
+                newbool = false;
+            }
+            if (newbool != enoughForAffixToc) {
+                enoughForAffixToc = newbool;
+                generateScrollspy();
+            }
+        }
+        $(window).resize(function () {
+            windowResize();
+        });
+        $(document).ready(function () {
+            windowResize();
+            generateScrollspy();
+        });
+
+        //remove hash
+        function removeHash() {
+            window.location.hash = '';
+        }
+
+        var backtotop = $('.back-to-top');
+        var gotobottom = $('.go-to-bottom');
+
+        backtotop.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToTop)
+                scrollToTop();
+            removeHash();
+        });
+        gotobottom.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToBottom)
+                scrollToBottom();
+            removeHash();
+        });
+
+        var toggle = $('.expand-toggle');
+        var tocExpand = false;
+
+        checkExpandToggle();
+        toggle.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            tocExpand = !tocExpand;
+            checkExpandToggle();
+        })
+
+        function checkExpandToggle () {
+            var toc = $('.ui-toc-dropdown .toc');
+            var toggle = $('.expand-toggle');
+            if (!tocExpand) {
+                toc.removeClass('expand');
+                toggle.text('Expand all');
+            } else {
+                toc.addClass('expand');
+                toggle.text('Collapse all');
+            }
+        }
+
+        function scrollToTop() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: 0
+            }, 100, "linear");
+        }
+
+        function scrollToBottom() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: $(document.body)[0].scrollHeight
+            }, 100, "linear");
+        }
+    </script>
+</body>
+
+</html>
